@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Checklist Form</title>
+
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional custom styles -->
+
+  <style>
+    /* Basic Reset */
+    body, h1, h2, h3, h4, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    /* Additional styles for the circular logo */
+    .navbar-brand img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: #004d00;
+      padding: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.1rem;
+      margin-left: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+      color: #ddd !important;
+    }
+
+    /* Form Section */
+    .form-container {
+      background-color: #ffffff;
+      padding: 50px 30px;
+      margin-top: 80px; /* Adding space to prevent hiding under navbar */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      color: #004d00;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .form-container form label {
+      font-weight: bold; /* Making field headings bold */
+    }
+
+    .form-container form input,
+    .form-container form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .form-container form textarea {
+      height: 150px;
+    }
+
+    .form-container form button {
+      background-color: #004d00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .form-container form button:hover {
+      background-color: #003300;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #004d00;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 10px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ddd;
+      transform: scale(1.1);
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    table th, table td {
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    table th {
+      width: 50%;
+    }
+
+    table td {
+      width: 25%;
+    }
+
+    /* Style for the Yes/No options */
+    .yes-no-options {
+      display: flex;
+      align-items: center;
+    }
+
+    .yes-no-options input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .yes-no-options label {
+      margin-right: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/Picture1.png" alt="Logo" />
+        Project Management Unit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarship.html">Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="Jobs.html">Jobs</a></li>
+        </ul>
+
+        <form class="form-inline ms-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <div class="container">
+    <div class="form-container">
+      <h2>Research Checklist Form</h2>
+      <form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Checklist/Required Documents</th>
+              <th>Tick (Yes or No)</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Is PI a full-time regular faculty member (BPS or TTS)/Research Officer/Employee or on contract not less than project life?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="full-time" value="yes" id="yes-1"><label for="yes-1">Yes</label>
+                <input type="radio" name="full-time" value="no" id="no-1"><label for="no-1">No</label>
+              </td>
+             
+            </tr>
+            <tr>
+              <td>Has PI never been blacklisted by HEC/S&T/SDU or any other funding agency?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="blacklisted" value="yes" id="yes-2"><label for="yes-2">Yes</label>
+                <input type="radio" name="blacklisted" value="no" id="no-2"><label for="no-2">No</label>
+              </td>
+             
+            </tr>
+            <tr>
+              <td>Is PI not executing any project whose completion is delayed by three (03) years? (If No, please specify their ID number.)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="delayed-project" value="yes" id="yes-3"><label for="yes-3">Yes</label>
+                <input type="radio" name="delayed-project" value="no" id="no-3"><label for="no-3">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Is PI not currently executing or has submitted two or more NRPU projects?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="nrpu-projects" value="yes" id="yes-4"><label for="yes-4">Yes</label>
+                <input type="radio" name="nrpu-projects" value="no" id="no-4"><label for="no-4">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Is Turnitin report of the proposal attached?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="turnitin-report" value="yes" id="yes-5"><label for="yes-5">Yes</label>
+                <input type="radio" name="turnitin-report" value="no" id="no-5"><label for="no-5">No</label>
+              </td>
+            
+            </tr>
+            <tr>
+              <td>Have relevant university authorities affixed signatures with date & stamps on the Declaration Certificates? (Section H of cover sheet for proposal at page # 3)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="university-signatures" value="yes" id="yes-6"><label for="yes-6">Yes</label>
+                <input type="radio" name="university-signatures" value="no" id="no-6"><label for="no-6">No</label>
+              </td>
+           
+            </tr>
+            <tr>
+              <td>Has a brief of the impact of research project been attached? (Section-5)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="impact-brief" value="yes" id="yes-7"><label for="yes-7">Yes</label>
+                <input type="radio" name="impact-brief" value="no" id="no-7"><label for="no-7">No</label>
+              </td>
+            
+            </tr>
+            <tr>
+              <td>Is industry support letter attached? (Section-2C)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="industry-support" value="yes" id="yes-8"><label for="yes-8">Yes</label>
+                <input type="radio" name="industry-support" value="no" id="no-8"><label for="no-8">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Has a letter of consent from collaborating partner/agency expressing willingness to collaborate been attached? (Section-7)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="consent-letter" value="yes" id="yes-9"><label for="yes-9">Yes</label>
+                <input type="radio" name="consent-letter" value="no" id="no-9"><label for="no-9">No</label>
+              </td>
+             
+            </tr>
+            <tr>
+              <td>Is one page summary of each project of PI already completed/ running/ submitted to any funding agency been attached? (Section-9)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="project-summary" value="yes" id="yes-10"><label for="yes-10">Yes</label>
+                <input type="radio" name="project-summary" value="no" id="no-10"><label for="no-10">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Is equipment demanded for the execution of the subject project not available with the University /Research Institute? (Section-10)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="equipment-available" value="yes" id="yes-11"><label for="yes-11">Yes</label>
+                <input type="radio" name="equipment-available" value="no" id="no-11"><label for="no-11">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Have original Invoices / Quotations for permanent equipment been attached? (Section-10)</td>
+              <td class="yes-no-options">
+                <input type="radio" name="invoices-attached" value="yes" id="yes-12"><label for="yes-12">Yes</label>
+                <input type="radio" name="invoices-attached" value="no" id="no-12"><label for="no-12">No</label>
+              </td>
+             
+            </tr>
+            <tr>
+              <td>Have year-wise cost and quantities of each expendable item been given (Section-10)?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="cost-quantities" value="yes" id="yes-13"><label for="yes-13">Yes</label>
+                <input type="radio" name="cost-quantities" value="no" id="no-13"><label for="no-13">No</label>
+              </td>
+             
+            </tr>
+            <tr>
+              <td>Has head of institution duly endorsed the application (Section-14) of the application form?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="institution-endorsement" value="yes" id="yes-14"><label for="yes-14">Yes</label>
+                <input type="radio" name="institution-endorsement" value="no" id="no-14"><label for="no-14">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Have you provided project activities on GANTT Chart?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="gantt-chart" value="yes" id="yes-15"><label for="yes-15">Yes</label>
+                <input type="radio" name="gantt-chart" value="no" id="no-15"><label for="no-15">No</label>
+              </td>
+             
+            </tr>
+            <tr>
+              <td>Have all fields of research proposal been carefully filled and counter checked by the PI?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="proposal-checked" value="yes" id="yes-16"><label for="yes-16">Yes</label>
+                <input type="radio" name="proposal-checked" value="no" id="no-16"><label for="no-16">No</label>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>Have you prepared 04 sets of research proposal (Hard copies) along with soft/scanned copies on Prescribed Application Form?</td>
+              <td class="yes-no-options">
+                <input type="radio" name="hard-copies" value="yes" id="yes-17"><label for="yes-17">Yes</label>
+                <input type="radio" name="hard-copies" value="no" id="no-17"><label for="no-17">No</label>
+              </td>
+            
+            </tr>
+          </tbody>
+        </table>
+        <div class="mb-4">
+            <h4>Upload and Download  Endorsment Documents</h4>
+            <div class="mb-3">
+              <label for="upload-file" class="form-label">Upload Signed Documents</label>
+              <input class="form-control" type="file" id="upload-file">
+            </div>
+            <div class="mb-3">
+              <label for="download-file" class="form-label">Download  Documents</label>
+              <a href="C:\Users\nidab\Downloads\endorsment.pdf" id="download-file" class="btn btn-info">Download</a>
+            </div>
+          </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pmuhed?mibextid=ZbWKwL" target="_blank"><img src="images/facebook.jpg" alt="Facebook" style="height: 30px;"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x.png" alt="x" style="height: 30px;"></a>
+      <a href="https://instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram" style="height: 30px;"></a>
+    </div>
+    <p>&copy; 2025 Project Management Unit. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+ 
+
+</body>
+</html>

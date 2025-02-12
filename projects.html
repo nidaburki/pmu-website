@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management Unit</title>
+
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional custom styles -->
+
+  <style>
+    /* Additional styles for the circular logo */
+    .navbar-brand img {
+      border-radius: 50%;
+      height: 60px; /* Increased height */
+      width: 60px; /* Increased width to maintain circular shape */
+    }
+
+    /* Adjusting the search bar and button */
+    .navbar .form-inline {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .navbar .form-inline input {
+      width: 200px; /* Specify width for the search bar */
+      margin-right: 10px;
+    }
+
+    .navbar .form-inline button {
+      margin-left: 10px;
+    }
+
+    /* Carousel image size adjustments */
+    .carousel-item img {
+      width: 100%;
+      height: 500px; /* Adjust to desired height */
+      object-fit: cover;
+    }
+
+    /* Styling for the introduction section */
+    .introduction {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #f8f9fa; /* Light background for contrast */
+      margin-top: 30px; /* Adds space below the carousel */
+    }
+
+    .introduction p {
+      font-size: 1.1rem; /* Slightly larger text for readability */
+      line-height: 1.6;  /* Increases line height for better readability */
+      max-width: 800px; /* Optional: Restrict max width to avoid overly wide text */
+      margin: 0 auto;  /* Centers the paragraph */
+    }
+
+    /* Section Styling (Cute Boxes with Light Green) */
+    .section {
+      position: relative;
+      padding: 40px 20px;
+      margin: 20px 0;
+      border-radius: 15px;
+      background-color: #e8f8e1; /* Light green background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+
+    .section:hover {
+      transform: translateY(-5px); /* Lift the box on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #66b266; /* Soft green color for headings */
+      font-family: 'Arial', sans-serif; /* Clean and modern font */
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    /* Number Box in the corner (Changed to Top-Left) */
+    .section-number {
+      position: absolute;
+      top: 10px;
+      left: 10px; /* Move the number to the top-left corner */
+      background-color: #004d00; /* Dark green */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #004d00; /* Green background */
+      padding: 20px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ddd;
+    }
+
+    /* Optional: Styling for the footer text */
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #004d00;">
+      <a class="navbar-brand" href="#">
+        <img src="images/Picture1.png" alt="Logo" style="height: 60px;"/> <!-- Circular Logo -->
+        Project Management Unit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Navbar Links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scholarship.html">Scholarships</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alumni.html">Alumni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Jobs.html">Jobs</a>
+            </li>
+        </ul>
+
+        <!-- Search Form aligned to the right -->
+        <form class="form-inline ms-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <div class="container text-center mt-5 pt-5">
+    <h1>Project Management Unit: Ongoing Projects</h1>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-number">1</div>
+      <h2>Capacity Building for college faculty in Newly Merged Districts.</h2>
+      <p>Capacity building for college faculty in NMDs is an umbrella project proposed to provide opportunities for college teachers to enrich their teaching experience by enhancing their qualifications and through professional training programs.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-number">2</div>
+      <h2>Introduction of BS Program in Colleges in all Tribal Districts.</h2>
+      <p>The Higher Education department deems it necessary to replace the older system with the new one i.e. introduction of 4-year degree classes in the colleges to make the degree compatible with international standards and market needs.The project is extremely significant in its nature as it has to be seen in the broader spectrum schemes of higher education in Accelerated Implementation Program (AIP). The activities proposed in this scheme are in relation with other schemes of the AIP for higher education which in consolidation makes an overarching and all-embracing program for NMDs.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-number">3</div>
+      <h2>Provision of Staff to Existing Colleges (Commerce + General).</h2>
+      <p>To fulfill the staff deficiency and ensure better service delivery and as a result increase the enrollment and produce quality graduates. To obtain maximum benefit from the existing higher educational institutions in NMAs.</p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-number">4</div>
+      <h2>Provision of Stipends and Scholarships to Students of Newly Merged Districts</h2>
+      <p>The project aims at achieving the standards of higher education at par with global academia by providing opportunities of excellence in higher education to the socio-economically challenged students of Newly Merged Tribal Districts (NMTDs).Higher Education Department, in the wake of merger of Tribal Districts into Khyber Pakhtunkhwa province, is determined to raise literacy in higher education drastically by providing overseas and indigenous scholarships to the students of NMTDs in order to uplift socio-economical status of the people of NMTDs.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="section-number">5</div>
+      <h2>Strengthening of BS Program in Newly Merged Districts</h2>
+      <p>To strengthen BS 4-Year Degree Program in Government colleges of Newly Merged Tribal Districts (NMTDs) in replacement of conventional BA/BSC 2-Year degree program by providing support for Science laboratory development, digital language laboratory, Plant and Machinery, Performance Grant, Research grant and Learning Management System. The Projects Objectives are related to sectoral objectives as Higher Education sector has initiated gradual phasing out of BA/BSC and MA/MSC programs from government colleges by introducing BS 4-Year degree programs and Associate Degree Programs in compliance to National Education Policy and various policy decisions issued by Higher Education Commission (HEC).</p>
+    </div>
+
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pmuhed?mibextid=ZbWKwL" target="_blank"><img src="images/facebook.jpg" alt="Facebook" style="height: 30px; width: 30px;"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x.png" alt="x" style="height: 30px; width: 30px;"></a>
+      <a href="https://instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram" style="height: 30px; width: 30px;"></a>
+    </div>
+    <p>&copy; 2025 Project Management Unit. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS File (optional) -->
+  <script src="js/script.js"></script> <!-- Link to your custom JS file -->
+
+</body>
+</html>

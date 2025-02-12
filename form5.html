@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management Unit Form</title>
+
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional custom styles -->
+
+  <style>
+    /* Basic Reset */
+    body, h1, h2, h3, h4, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    /* Additional styles for the circular logo */
+    .navbar-brand img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: #004d00;
+      padding: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.1rem;
+      margin-left: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+      color: #ddd !important;
+    }
+
+    /* Search Bar Styling */
+    .navbar .form-inline {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .form-inline input {
+      width: 200px;
+      border-radius: 0; /* Remove rounded edges */
+      border: none; /* Remove default border */
+      padding: 8px;
+    }
+
+    .navbar .form-inline button {
+      border-radius: 0; /* Remove rounded edges */
+      border: none; /* Remove default border */
+      background-color: #004d00; /* Match navbar color */
+      color: white;
+      padding: 8px 12px;
+      margin-left: -1px; /* Align button with input */
+    }
+
+    .navbar .form-inline button:hover {
+      background-color: #003300; /* Darker shade on hover */
+    }
+
+    /* Form Section */
+    .form-container {
+      background-color: #ffffff;
+      padding: 50px 30px;
+      margin-top: 80px; /* Adding space to prevent hiding under navbar */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      color: #004d00;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .form-container form label {
+      font-weight: bold; /* Making field headings bold */
+    }
+
+    .form-container form input,
+    .form-container form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .form-container form textarea {
+      height: 150px;
+    }
+
+    .form-container form button {
+      background-color: #004d00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .form-container form button:hover {
+      background-color: #003300;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #004d00;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 10px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ddd;
+      transform: scale(1.1);
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #004d00;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/Picture1.png" alt="Logo" />
+        Project Management Unit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarship.html">Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="Jobs.html">Jobs</a></li>
+        </ul>
+
+        <form class="form-inline ms-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <div class="container">
+    <div class="form-container">
+      <h2>Project Details</h2>
+      <form>
+
+        <!-- Principal Investigator Projects Table -->
+        <div class="form-group">
+          <h4>Principal Investigator: Research Projects Summary</h4>
+          <p>In addition to the following information, also provide a one-page summary of each research project completed, ongoing, or submitted (to HEC/S&T/SDU or any other funding agency) as PI or Co-PI.</p>
+
+          <!-- Table for Research Projects -->
+          <table>
+            <thead>
+              <tr>
+                <th>Sr. #</th>
+                <th>Title of Project</th>
+                <th>Initiation Date</th>
+                <th>Completion Date</th>
+                <th>Amount(s) Awarded</th>
+                <th>Funding Source(s)</th>
+                <th>Attach One-Page Summary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><input type="text" name="project-title-1" placeholder="Project Title" required></td>
+                <td><input type="date" name="start-date-1" required></td>
+                <td><input type="date" name="end-date-1" required></td>
+                <td><input type="number" name="amount-awarded-1" placeholder="Amount" required></td>
+                <td><input type="text" name="funding-source-1" placeholder="Funding Source" required></td>
+                <td><input type="file" name="project-summary-1" required></td>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>2</td>
+                  <td><input type="text" name="project-title-1" placeholder="Project Title" required></td>
+                  <td><input type="date" name="start-date-1" required></td>
+                  <td><input type="date" name="end-date-1" required></td>
+                  <td><input type="number" name="amount-awarded-1" placeholder="Amount" required></td>
+                  <td><input type="text" name="funding-source-1" placeholder="Funding Source" required></td>
+                  <td><input type="file" name="project-summary-1" required></td>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td><input type="text" name="project-title-1" placeholder="Project Title" required></td>
+                    <td><input type="date" name="start-date-1" required></td>
+                    <td><input type="date" name="end-date-1" required></td>
+                    <td><input type="number" name="amount-awarded-1" placeholder="Amount" required></td>
+                    <td><input type="text" name="funding-source-1" placeholder="Funding Source" required></td>
+                    <td><input type="file" name="project-summary-1" required></td>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td>4</td>
+                      <td><input type="text" name="project-title-1" placeholder="Project Title" required></td>
+                      <td><input type="date" name="start-date-1" required></td>
+                      <td><input type="date" name="end-date-1" required></td>
+                      <td><input type="number" name="amount-awarded-1" placeholder="Amount" required></td>
+                      <td><input type="text" name="funding-source-1" placeholder="Funding Source" required></td>
+                      <td><input type="file" name="project-summary-1" required></td>
+                    </tr>
+                    <tbody>
+                      <tr>
+                        <td>5</td>
+                        <td><input type="text" name="project-title-1" placeholder="Project Title" required></td>
+                        <td><input type="date" name="start-date-1" required></td>
+                        <td><input type="date" name="end-date-1" required></td>
+                        <td><input type="number" name="amount-awarded-1" placeholder="Amount" required></td>
+                        <td><input type="text" name="funding-source-1" placeholder="Funding Source" required></td>
+                        <td><input type="file" name="project-summary-1" required></td>
+                      </tr>
+              
+              
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Facilities Section -->
+        <div class="form-group">
+          <label for="facilities">A Brief Resume of PI & Co-PI (Personal information, Education and experience, Title of Thesis (MS/PhD), Teaching expertise, Professional memberships, List of Publications, Books Published, Research skills, other relevant facts, references, etc.)
+        </label>
+        <td>
+            <label for="file-upload-1" class="custom-file-upload">
+              Choose Files
+            </label>
+            <input id="file-upload-1" type="file" name="project-summary-1" multiple required />
+          </td>
+          
+        </div>
+
+        <div class="form-group">
+          <label for="additional-equipment">Estimated budget for the proposed research including essential equipments, experimental consumables with justification and quotations. 
+            Note: The budget is limited to the above items and no grants will be approved for travel, salaries, remuneration office equipments   
+            </label>
+          <textarea id="additional-equipment" name="additional-equipment" placeholder="List additional required equipment" required></textarea>
+        </div>
+
+        
+
+        <div class="text-center next-button">
+          <a href="form6.html">
+            <button type="button" class="btn btn-success">Next</button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pmuhed?mibextid=ZbWKwL" target="_blank"><img src="images/facebook.jpg" alt="Facebook" style="height: 30px;"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x.png" alt="x" style="height: 30px;"></a>
+      <a href="https://instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram" style="height: 30px;"></a>
+    </div>
+    <p>&copy; 2025 Project Management Unit. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

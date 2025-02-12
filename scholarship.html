@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Management Unit</title>
+
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional custom styles -->
+
+  <style>
+    /* Additional styles for the circular logo */
+    .navbar-brand img {
+      border-radius: 50%;
+      height: 60px; /* Increased height */
+      width: 60px; /* Increased width to maintain circular shape */
+    }
+
+    /* Adjusting the search bar and button */
+    .navbar .form-inline {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .navbar .form-inline input {
+      width: 200px; /* Specify width for the search bar */
+      margin-right: 10px;
+    }
+
+    .navbar .form-inline button {
+      margin-left: 10px;
+    }
+
+    /* Carousel image size adjustments */
+    .carousel-item img {
+      width: 100%;
+      height: 500px; /* Adjust to desired height */
+      object-fit: cover;
+    }
+
+    /* Styling for the introduction section */
+    .introduction {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #f8f9fa; /* Light background for contrast */
+      margin-top: 30px; /* Adds space below the carousel */
+    }
+
+    .introduction p {
+      font-size: 1.1rem; /* Slightly larger text for readability */
+      line-height: 1.6;  /* Increases line height for better readability */
+      max-width: 800px; /* Optional: Restrict max width to avoid overly wide text */
+      margin: 0 auto;  /* Centers the paragraph */
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #004d00; /* Green background */
+      padding: 20px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ddd;
+    }
+
+    /* Optional: Styling for the footer text */
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #004d00;">
+      <a class="navbar-brand" href="#">
+        <img src="images/Picture1.png" alt="Logo" style="height: 60px;"/> <!-- Circular Logo -->
+        Project Management Unit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Navbar Links -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="scholarship.html">Scholarships</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alumni.html">Alumni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Jobs.html">Jobs</a>
+            </li>
+           
+        </ul>
+
+        <!-- Search Form aligned to the right -->
+        <form class="form-inline ms-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Projects Section -->
+   <!-- Container for content -->
+   <div class="container text-center mt-5 pt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img class="rounded-circle" src="images/gov.png" alt="school image">
+        <h2>CMEEF</h2>
+       <p>Chief Minister Education Endowment Fund Scholarships (CMEEF) has been established for the talented and deserving students of
+          Khyber Pakhtunkhwa purely on a merit-cum-affordability basis in selected leading national
+          institutions both at Undergraduate and Graduate levels and internationally in the top 300 Universities
+          of the world (QS ranking) in Ph.D.</p>
+        <p><a class="btn btn-secondary" href="cmeef.html" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <img class="rounded-circle" src="images/gov.png" alt="awards image">
+        <h2>HEEF</h2>
+        <p>The Higher Education Endowment Fund (HEEF) scholarships are provided to the
+          students of BS Programs studying in Govt colleges of the province on merit cum affordability
+          basis. The said Scholarships are   provided to top-02 position holders in each semester.</p>
+        <p><a class="btn btn-secondary" href="heef.html" role="button">View details &raquo;</a></p>
+      </div>
+      
+    </div>
+  </div>
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pmuhed?mibextid=ZbWKwL" target="_blank"><img src="images/facebook.jpg" alt="Facebook" style="height: 30px; width: 30px;"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x.png" alt="x" style="height: 30px; width: 30px;"></a>
+      <a href="https://instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram" style="height: 30px; width: 30px;"></a>
+    </div>
+    <p>&copy; 2025 Project Management Unit. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS File (optional) -->
+  <script src="js/script.js"></script> <!-- Link to your custom JS file -->
+
+</body>
+</html>

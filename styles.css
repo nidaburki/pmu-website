@@ -1,0 +1,10 @@
+.navbar-brand div {
+    text-align: center; /
+  }
+  
+  .navbar-brand h5 {
+    margin-top: -10px; 
+    font-size: 0.9rem;
+    color: white;
+  }
+  

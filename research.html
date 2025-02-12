@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HREF - Project Details</title>
+
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional custom styles -->
+
+  <style>
+    /* Additional styles for the circular logo */
+    .navbar-brand img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+
+    /* Adjusting the search bar and button */
+    .navbar .form-inline {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .navbar .form-inline input {
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    .navbar .form-inline button {
+      margin-left: 10px;
+    }
+
+    /* Carousel image size adjustments */
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    /* Styling for the introduction section */
+    .introduction {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #f8f9fa;
+      margin-top: 30px;
+    }
+
+    .introduction p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Styling for HREF content */
+    .href-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .href-content img {
+      max-width: 40%; /* Adjusts image size */
+      height: auto;
+    }
+
+    .href-content-text {
+      max-width: 55%;
+    }
+
+    .href-content-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Styling for Phases content */
+    .phases-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .phases-content img {
+      max-width: 40%; /* Adjusts image size */
+      height: auto;
+    }
+
+    .phases-content-text {
+      max-width: 55%;
+    }
+
+    /* Button for Form Submission */
+    .btn-submit {
+      background-color: #004d00;
+      color: white;
+      font-size: 1rem;  /* Smaller font size */
+      padding: 10px 20px; /* Reduced padding */
+      border-radius: 5px;
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+      margin-bottom: 30px; /* Add more margin to place it above the footer */
+    }
+
+    .btn-submit:hover {
+      background-color: #003d00;
+    }
+
+    .footer {
+      background-color: #004d00;
+      padding: 20px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ddd;
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (Navbar) -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #004d00;">
+      <a class="navbar-brand" href="#">
+        <img src="images/Picture1.png" alt="Logo" style="height: 60px;"/>
+        Project Management Unit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarship.html">Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="Jobs.html">Jobs</a></li>
+        </ul>
+        <form class="form-inline ms-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content (Project Details) -->
+  <div class="container text-center mt-5 pt-5">
+    <div class="href-content">
+      <div class="href-content-text">
+        <h2>Higher Education Research Endowment Fund (HEREF)</h2>
+        <p>The research grants are offered to qualified scholars/researchers in Khyber Pakhtunkhwa promoting with focus on the natural resources of the province, promoting local industry, import-export potential, and its contribution to the economy. Through PMU-HED research grants are awarded to qualified scholars in the Public Sector Universities/Government Colleges of Khyber Pakhtunkhwa. The award of research grants is operated under the Khyber Pakhtunkhwa Higher Education Research Endowment Fund Act, 2004.</p>
+      </div>
+      <img src="images/7.jpg" alt="HREF Image" />
+    </div>
+
+    <div class="phases-content">
+      <img src="images/4.jpg" alt="Phases Image" />
+      <div class="phases-content-text">
+        <h2>Phases</h2>
+        <p>In phase 1 of scheme 22 research grants have been awarded to principal investigators through their concerned institutes. The next phase is under process and 27 research proposals have been shortlisted for funding by the technical committee focal persons.</p>
+      </div>
+    </div>
+
+    <div class="download-upload-section">
+      <p>Please read the instructions carefully before submitting the form</p>
+      <label for="download and read instructions">Download</label>
+      <a href="C:\Users\nidab\OneDrive\Desktop\Application Form HEREF new.docx" target="_blank">Instructions</a>
+    </div>
+
+    <!-- Smaller Button for HREF Form Submission -->
+    <a href="href_form.html" class="btn-submit">Apply Here</a>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pmuhed?mibextid=ZbWKwL" target="_blank"><img src="images/facebook.jpg" alt="Facebook" style="height: 30px; width: 30px;"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x.png" alt="x" style="height: 30px; width: 30px;"></a>
+      <a href="https://instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram" style="height: 30px; width: 30px;"></a>
+    </div>
+    <p>&copy; 2025 Project Management Unit. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS File (optional) -->
+  <script src="js/script.js"></script> <!-- Link to your custom JS file -->
+</body>
+</html>

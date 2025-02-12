@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Project Management Unit</title>
+
+  <!-- Bootstrap CSS (via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional custom styles -->
+
+  <style>
+    /* Reuse styles from your existing website */
+    body, h1, h2, h3, h4, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    .navbar-brand img {
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+
+    .navbar {
+      background-color: #004d00;
+      padding: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.1rem;
+      margin-left: 15px;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+      color: #ddd !important;
+    }
+
+    /* Form Styling */
+    .form-container {
+      margin-top: 100px;
+      background-color: #ffffff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      color: #004d00;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .form-container label {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-container button {
+      background-color: #004d00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: #003300;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: #004d00;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 10px;
+    }
+
+    .footer .social-icons a {
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ddd;
+      transform: scale(1.1);
+    }
+
+    .footer p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    /* Footer button positioning */
+    .next-button {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (Reused from your existing website) -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/Picture1.png" alt="Logo" />
+        Project Management Unit
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="scholarship.html">Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="Jobs.html">Jobs</a></li>
+        </ul>
+
+        <form class="form-inline ms-auto">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Proposal Cover Sheet Form -->
+  <div class="container form-container">
+    <h2>Project Details</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+      
+      <!-- Project Details Section -->
+      <label for="project_summary">Project Summary (Describe the proposed research):</label>
+      <textarea id="project_summary" name="project_summary" rows="5" required></textarea>
+
+      <label for="goals_objectives">Proposed Goals/Objectives (Please identify quantifiable goals):</label>
+      <textarea id="goals_objectives" name="goals_objectives" rows="5" required></textarea>
+
+      <p>⦁If the proposed research is basic, please identify or postulate scientific hypothesis on which your proposed goal is based.</p>
+      <p>⦁If the proposed research is applied, please identify the output in the form of a product or process, need or relationship to industry and also identify the end-user of your output/ product. </p>
+      <p>⦁Principal investigator is encouraged to make preliminary inquiries with the proposed end user and attach any certificate/ document in support of the proposed research</p>
+      <label for="hypothesis">Hypothesis/Basis of Research (If research is basic):</label>
+      <textarea id="hypothesis" name="hypothesis" rows="5"></textarea>
+
+      <label for="applied_goals">Goals/Objectives for Applied Research:</label>
+      <textarea id="applied_goals" name="applied_goals" rows="5"></textarea>
+      <p>⦁Please quantify your objectives.Moreover, describe how proposed research is relevant to national needs</p>
+
+      <label for="end_user">Identify end-user/beneficiary sector/industry (Support letter to be attached):</label>
+      <input type="text" id="end_user" name="end_user">
+
+      <!-- Introduction Section -->
+      <label for="introduction">Introduction: The introduction should consist of three paragraphs; the first paragraph indicating the scientific hypothesis/commercial basis on which the project is based, the second introducing the precise nature of the project, while the final paragraph highlighting the proposed objectives in the light of the first two paragraphs</label>
+      <textarea id="introduction" name="introduction" rows="5" required></textarea>
+
+      <!-- Justification Section -->
+      <label for="justification">Justification for the research problem (Not more than two pages):</label>
+      <textarea id="justification" name="justification" rows="10" required></textarea>
+
+      <p>
+        ⦁In case of basic research, provide a comprehensive and up-to-date literature survey clearly highlighting the existing gaps and what new information will be added to the existing pool of knowledge.
+      </p>
+      <p>
+        ⦁In case of applied research, identify the sector/industry in Khyber Pakhtunkhwa which will get benefit from the process/product.
+      </p>
+      <p>
+        ⦁Justify how the proposed research will contribute to the provincial/national economy/social sector.
+      </p>
+      <p>⦁The principal Investigator is encouraged to discuss the proposed research with the proposed beneficiary and attach supporting documentation</p>
+
+      <!-- Research Plan Methodology Section -->
+      <label for="research_plan">Research Plan/Methodology (Schedule/Phasing):</label>
+      <textarea id="research_plan" name="research_plan" rows="5"></textarea>
+
+      <!-- References Section -->
+      <label for="references">References:</label>
+      <textarea id="references" name="references" rows="5"></textarea>
+
+      <!-- Next Button -->
+      <div class="text-center next-button">
+        <a href="form4.html">
+          <button type="button" class="btn btn-success">Next</button>
+        </a>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Footer (Updated) -->
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/pmuhed?mibextid=ZbWKwL" target="_blank"><img src="images/facebook.jpg" alt="Facebook" style="height: 30px;"></a>
+      <a href="https://x.com" target="_blank"><img src="images/x.png" alt="Twitter" style="height: 30px;"></a>
+      <a href="https://www.instagram.com/pmuhed/" target="_blank"><img src="images/insta.jpg" alt="Instagram" style="height: 30px;"></a>
+    </div>
+    <p>&copy; 2025 Project Management Unit. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
